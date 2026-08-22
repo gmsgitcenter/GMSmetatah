@@ -1057,17 +1057,25 @@ textarea:focus-visible {
   50% { transform: scale(.9); }
 }
 
-/* Reveal */
+/* =========================================================
+   SLOWER SCROLL REVEAL
+========================================================= */
+
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity var(--transition), transform var(--transition);
+  transform: translateY(32px);
+
+  transition:
+    opacity 1.35s cubic-bezier(.22, 1, .36, 1),
+    transform 1.35s cubic-bezier(.22, 1, .36, 1);
+
+  transition-delay: .18s;
 }
 
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
-}
+}  
 
 /* Tablet and desktop enhancement */
 @media (min-width: 768px) {
