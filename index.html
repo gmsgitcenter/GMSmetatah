@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f8f4ef">
+  <meta name="description" content="Digital wedding invitation">
+  <title>XXX & XXX — Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <section class="hero reveal" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">THE WEDDING OF</p>
+        <h1><span data-config="bride">XXX</span><i>&</i><span data-config="groom">XXX</span></h1>
+        <p class="date" data-config="dateLabel">XXX</p>
+        <a class="button button-light" href="#details">Open Invitation</a>
+      </div>
+    </section>
+
+    <section class="section intro reveal">
+      <p class="eyebrow">WITH JOY IN OUR HEARTS</p>
+      <h2>Two hearts,<br>one beautiful beginning.</h2>
+      <p>We invite you to celebrate this special day with us.</p>
+    </section>
+
+    <section class="section couple reveal">
+      <div class="portrait-card">
+        <div class="portrait-placeholder">PHOTO</div>
+        <p class="role">THE GROOM</p>
+        <h3 data-config="groom">XXX</h3>
+        <p>Son of <span data-config="groomFather">XXX</span> & <span data-config="groomMother">XXX</span></p>
+      </div>
+      <div class="amp">&</div>
+      <div class="portrait-card">
+        <div class="portrait-placeholder">PHOTO</div>
+        <p class="role">THE BRIDE</p>
+        <h3 data-config="bride">XXX</h3>
+        <p>Daughter of XXX & XXX</p>
+      </div>
+    </section>
+
+    <section class="section countdown-section reveal">
+      <p class="eyebrow">COUNTING DOWN TO FOREVER</p>
+      <div class="countdown" aria-label="Wedding countdown">
+        <div><strong id="days">00</strong><span>Days</span></div>
+        <div><strong id="hours">00</strong><span>Hours</span></div>
+        <div><strong id="minutes">00</strong><span>Minutes</span></div>
+        <div><strong id="seconds">00</strong><span>Seconds</span></div>
+      </div>
+    </section>
+
+    <section class="section details reveal" id="details">
+      <p class="eyebrow">SAVE THE DATE</p>
+      <h2>Our special day</h2>
+      <a id="calendarLink" class="detail-link" target="_blank" rel="noopener">
+        <span class="detail-icon">♡</span>
+        <span><b data-config="dateLabel">XXX</b><small>Add to Google Calendar</small></span>
+      </a>
+      <a id="mapsLink" class="detail-link" target="_blank" rel="noopener">
+        <span class="detail-icon">⌖</span>
+        <span><b data-config="venue">XXX</b><small>Open location in Google Maps</small></span>
+      </a>
+    </section>
+
+    <section class="section photo-break reveal">
+      <div class="photo-placeholder">PRE-WEDDING PHOTO</div>
+    </section>
+
+    <section class="section rsvp reveal" id="rsvp">
+      <p class="eyebrow">KINDLY RESPOND</p>
+      <h2>Will you celebrate<br>with us?</h2>
+      <form id="rsvpForm">
+        <label>Full Name<input name="name" required maxlength="80" autocomplete="name" placeholder="Your full name"></label>
+        <fieldset>
+          <legend>Attendance</legend>
+          <label class="choice"><input type="radio" name="attendance" value="Attending" required> <span>Attending</span></label>
+          <label class="choice"><input type="radio" name="attendance" value="Not Attending"> <span>Not Attending</span></label>
+        </fieldset>
+        <label>Number of guests<input name="guests" type="number" min="0" max="10" value="1" required></label>
+        <label>Wishes & messages<textarea name="message" maxlength="500" rows="5" placeholder="Leave a little love for the newlyweds..."></textarea></label>
+        <button class="button" type="submit">Send RSVP</button>
+        <p id="formStatus" class="form-status" role="status"></p>
+      </form>
+    </section>
+
+    <section class="section wishes reveal">
+      <p class="eyebrow">FROM OUR LOVED ONES</p>
+      <h2>Wedding wishes</h2>
+      <div id="wishesList" class="wishes-list">
+        <p class="muted">Loading wishes...</p>
+      </div>
+    </section>
+
+    <section class="section gift reveal">
+      <p class="eyebrow">A LITTLE SOMETHING</p>
+      <h2>Wanna give us some gifts?</h2>
+      <div class="gift-card">
+        <p><span>Bank account</span><b data-config="bank">XXX</b></p>
+        <button type="button" class="copy-button" data-copy-config="bank">Copy account number</button>
+        <hr>
+        <p><span>Gift delivery address</span><b data-config="giftAddress">XXX</b></p>
+      </div>
+    </section>
+
+    <section class="closing reveal">
+      <p class="eyebrow">THANK YOU</p>
+      <h2>See you on<br>our beautiful day.</h2>
+      <p>With love,<br><span data-config="bride">XXX</span> & <span data-config="groom">XXX</span></p>
+    </section>
+  </main>
+
+  <button id="musicButton" class="music-button" aria-label="Toggle background music">♪</button>
+  <audio id="bgMusic" loop preload="none" src="assets/music.mp3"></audio>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
