@@ -16,5 +16,5 @@ window.WEDDING_CONFIG = {
   calendarDescription: "We would be delighted to celebrate this special day with you.",
   bank: "XXX",
   giftAddress: "XXX",
-  appsScriptUrl: "https://script.google.com/macros/s/AKfycbxCc41aJ0TT_ZQi5crruPAN0JIK_qmMn2p4hoAx4HVV8gCL36lrwOZg6bPkbmShHpADEw/exec"
+  appsScriptUrl: "https://script.google.com/macros/s/AKfycbx7IEB948OZr271cThpHOtZ5qy0XAyvMdvj_r9khJIrHEkCYGSLpwyXHH4_Q23CLL4CWQ/exec"
 };
